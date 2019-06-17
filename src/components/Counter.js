@@ -20,10 +20,10 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => {/* Fill me in */ }}>
+                <button onClick={() => {this.props.increment()}}>
                     +
                 </button>
-                <button onClick={() => {/* Fill me in */ }}>
+                <button onClick={() => {this.props.increment()}}>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
@@ -50,6 +50,8 @@ const mapStateToProps = (state) => {
         count: state.count
     };
 };
+
+// const mapDispatch
 
 // The connect function is called in order to make this component aware
 // of the rest of the redux architecture. Without this, this component
